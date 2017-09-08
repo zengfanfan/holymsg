@@ -10,7 +10,7 @@ ${TARGET}: ${OBJS} ${SUBOBJS}
 	${LD} -r -o $@ $^
 
 subs:
-	for i in ${SUBDIRS}; \
+	@for i in ${SUBDIRS}; \
 		do make -C $$i PARENT=${MYPATH} || exit $$?;\
 	done
 

@@ -1,7 +1,5 @@
 export TOP := $(shell pwd)
 export _DEBUG_ := y
-export CC := gcc
-export STRIP := strip
 
 TARGET := holymsg
 LIBTARGET := lib${TARGET}.so
@@ -28,5 +26,4 @@ ${TARGET}: ${OBJS} ${SUBOBJS}
 
 ${LIBTARGET}: ${TARGET}.o ${SUBOBJS}
 	${CC} -shared -o $@ $^
-
 
