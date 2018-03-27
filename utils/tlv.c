@@ -1,3 +1,9 @@
+/*
+ * Copyright (C) 2017-2018 zengfanfan.com & https://github.com/zengfanfan/.
+ * All rights reserved.
+ *
+ * `holymsg` is a implementation of publish-subscribe pattern.
+ */
 #include "tlv.h"
 
 tlv_t *new_tlv(tlv_type_t type, u32 len, void *value)

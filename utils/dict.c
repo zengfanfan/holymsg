@@ -1,3 +1,9 @@
+/*
+ * Copyright (C) 2017-2018 zengfanfan.com & https://github.com/zengfanfan/.
+ * All rights reserved.
+ *
+ * `holymsg` is a implementation of publish-subscribe pattern.
+ */
 #include "dict.h"
 
 #define DICT_HASH_MASK  (DICT_HASH_SIZE - 1)

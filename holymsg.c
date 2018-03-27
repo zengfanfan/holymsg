@@ -1,3 +1,9 @@
+/*
+ * Copyright (C) 2017-2018 zengfanfan.com & https://github.com/zengfanfan/.
+ * All rights reserved.
+ *
+ * `holymsg` is a implementation of publish-subscribe pattern.
+ */
 #include <unistd.h>
 #include <sys/resource.h>
 #include <utils/print.h>
@@ -15,12 +21,12 @@ typedef struct {
 
 static holymq_t mq;
 static dict_t maps;
-int __holymsg_i_am_master = 0;
+int g_holymsg_i_am_master = 0;
 
 static int holymsg_init()
 {
     static int inited = 0;
-    int key = __holymsg_i_am_master ? 0 : getpid();
+    int key = g_holymsg_i_am_master ? 0 : getpid();
 
     if (inited) {
         return 1;
